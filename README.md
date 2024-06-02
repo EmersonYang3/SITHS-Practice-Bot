@@ -18,3 +18,6 @@ As of now, we are in the early stages of development, so there are no features a
 
 ## Planned Updates
 We are currently in the planning phase as of May 30, 2024. We will update this section as soon as we finalize the features for the upcoming updates.
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
