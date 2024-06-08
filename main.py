@@ -13,12 +13,13 @@ Bot = commands.Bot(command_prefix="!", help_command=None, case_insensitive=True,
 async def load_cog():
     for filename in os.listdir('./Commands'):
         if filename.endswith('.py'):
-            Bot.load_extension(f'Commands.{filename[:-3]}')
+            await Bot.load_extension(f'Commands.{filename[:-3]}')
 
 asyncio.run(load_cog())
 
 @Bot.event
 async def on_ready():
-    await Bot.tree.sync()
+    synced = await Bot.tree.sync()
+    print(f'{Bot.user} has connected to Discord! Synced {len(synced)} commands.')
 
 Bot.run(Discord_Token)
